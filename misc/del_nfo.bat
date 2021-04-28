@@ -13,7 +13,7 @@ IF /i "%c%" NEQ "y" GOTO :quit
 ECHO.
 
 ECHO matching files found in "%~dp0"
-FOR /r %%a in (*.nfo) DO IF EXIST "%%a" (
+FOR /r %%a in ("*.nfo") DO IF EXIST "%%a" (
 	ECHO - "%%a" 
 	del "%%a"
 	ECHO.

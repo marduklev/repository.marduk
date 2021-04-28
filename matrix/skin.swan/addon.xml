@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.swan" version="19.1.06~alpha" name="S W A N" provider-name="marduk">
+<addon id="skin.swan" version="19.1.07~alpha" name="S W A N" provider-name="marduk">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
-		<import addon="script.embuary.helper" version="1.4.9"/>
+		<import addon="script.embuary.helper" version="2.0.8"/>
 		<import addon="resource.images.studios.coloured" version="0.0.19"/>
 		<import addon="resource.images.studios.white" version="0.0.25"/>
 		<import addon="resource.images.weathericons.outline-hd" version="0.0.3"/>

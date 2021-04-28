@@ -12,7 +12,7 @@ IF /i "%c%" NEQ "y" GOTO :quit
 :delete
 ECHO.
 ECHO matching folders found in "%~dp0"
-FOR /d /r %%d in (extrathumbs extrafanart) DO IF EXIST "%%d" (
+FOR /d /r %%d in ("extrathumbs" extrafanart) DO IF EXIST "%%d" (
 	ECHO - "%%d"
 	rd /s /q "%%d"
 	ECHO.
