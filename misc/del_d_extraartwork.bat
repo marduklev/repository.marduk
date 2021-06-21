@@ -9,6 +9,7 @@ ECHO.
 SET /p c=Are you sure you want to continue[y/n] ?  
 IF /i "%c%" EQU "y" GOTO :delete
 IF /i "%c%" NEQ "y" GOTO :quit
+
 :delete
 ECHO.
 ECHO matching folders found in "%~dp0"

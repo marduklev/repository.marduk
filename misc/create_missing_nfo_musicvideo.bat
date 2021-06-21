@@ -1,19 +1,18 @@
-@echo off & setlocal
+@echo off
+setlocal
 title %~dp0
 color b
 echo -------------------------------------------------------------------------
 echo  create nfo for musicvideos if missing
 echo  BETTER DO A SCRAPE AND EXPORT NFO BEFORE AFTER RUN THIS SCRIPT
 echo  be sure you dont use any special characters like ^& in filename and foldername
-rem cant use parentheses in code because parentheses in string will causing unwished behaviour, escapeing them in for nfo tags will write enclosing chars
-rem i dont like ren before
 echo  push key to start
 echo -------------------------------------------------------------------------
 echo.
 pause > nul
 
 
-for /r %%a in (*.mkv *.avi *.mp4) do call :subroutine_check "%%~na"
+for /r %%a in (*.avi *.mp4) do call :subroutine_check "%%~na"
 echo.
 echo 	creatin is done
 echo 	scroll up to chcek for errors.   push key to exit

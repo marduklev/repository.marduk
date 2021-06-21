@@ -12,13 +12,13 @@ IF /i "%c%" NEQ "y" GOTO :quit
 :delete
 ECHO.
 ECHO matching folders found in "%~dp0"
-FOR /d /r %%d in ("extrathumbs" extrafanart) DO IF EXIST "%%d" (
+FOR /d /r %%d in (extrathumbs extrafanart) DO IF EXIST "%%d" (
 	ECHO - "%%d"
 	rd /s /q "%%d"
 	ECHO.
 )
 ECHO matching files found in "%~dp0"
-FOR /r %%a in (thumb.jpg poster.jpg landscape.jpg fanart.jpg banner.jpg clearart.png logo.png clearlogo.png disc.png discart.jpg discart.png *.nfo) DO IF EXIST "%%a" (
+FOR /r %%a in (thumb.jpg poster.jpg landscape.jpg fanart.jpg banner.jpg clearart.png logo.png clearlogo.png disc.png discart.jpg discart.png "*.nfo") DO IF EXIST "%%a" (
 	ECHO - "%%a" 
 	del "%%a"
 	ECHO.

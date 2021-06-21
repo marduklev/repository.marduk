@@ -13,7 +13,7 @@
 			<platform>all</platform>
 		</extension>
 	</addon>
-	<addon id="skin.swan" version="19.1.07~alpha" name="S W A N" provider-name="marduk">
+	<addon id="skin.swan" version="19.1.08~alpha" name="S W A N" provider-name="marduk">
 		<requires>
 			<import addon="xbmc.gui" version="5.15.0"/>
 			<import addon="script.embuary.helper" version="1.4.9"/>

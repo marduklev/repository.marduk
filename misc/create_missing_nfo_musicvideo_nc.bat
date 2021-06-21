@@ -1,12 +1,11 @@
-@echo off & setlocal
+@echo off
+setlocal
 title %~dp0
 color b
 echo -------------------------------------------------------------------------
 echo  create nfo for musicvideos if missing
 echo  BETTER DO A SCRAPE AND EXPORT NFO BEFORE RUN THIS SCRIPT
 echo  be sure you dont use any special characters like ^& in filename and foldername
-rem cant use parentheses in code because parentheses in string will causing unwished behaviour, escapeing them in for nfo tags will write enclosing chars
-rem i dont like ren before
 echo  push key to start
 echo -------------------------------------------------------------------------
 echo.
