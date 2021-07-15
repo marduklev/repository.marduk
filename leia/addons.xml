@@ -13,6 +13,21 @@
 			<platform>all</platform>
 		</extension>
 	</addon>
+	<extension point="xbmc.addon.repository" name="CastagnaIT Repository">
+		<dir>
+			<info>https://github.com/CastagnaIT/repository.castagnait/raw/master/addons.xml</info>
+			<checksum>https://github.com/CastagnaIT/repository.castagnait/raw/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/CastagnaIT/repository.castagnait/raw/master/zip</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>CastagnaIT Repository for Kodi 18.x (LEIA)</summary>
+		<description>Castagna IT repository for Kodi 18.x add-ons</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.jpg</icon>
+		</assets>
+	</extension>
 	<addon id="script.tvmelodies" version="0.0.2" name="TV Melodies" provider-name="smitchell6879">
 		<requires>
 		  <import addon="xbmc.python" version="2.25.0"/>

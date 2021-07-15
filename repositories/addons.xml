@@ -1,22 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <addons>
-	<addon id="repository.castagnait" name="CastagnaIT Repository for Kodi 18.x (LEIA)" version="1.0.1" provider-name="castagnait">
-		<extension point="xbmc.addon.repository" name="CastagnaIT Repository">
-			<dir maxversion="18.9.0">
-				<info>https://github.com/CastagnaIT/repository.castagnait/raw/master/addons.xml</info>
-				<checksum>https://github.com/CastagnaIT/repository.castagnait/raw/master/addons.xml.md5</checksum>
-				<datadir zip="true">https://github.com/CastagnaIT/repository.castagnait/raw/master/zip</datadir>
-			</dir>
-		</extension>
-		<extension point="xbmc.addon.metadata">
-			<summary>CastagnaIT Repository for Kodi 18.x (LEIA)</summary>
-			<description>Castagna IT repository for Kodi 18.x add-ons</description>
-			<platform>all</platform>
-			<assets>
-				<icon>icon.jpg</icon>
-			</assets>
-		</extension>
-	</addon>
 	<addon id="repository.fredsrepo" name="Sualfreds Repo" version="1.0.9" provider-name="sualfred">
 		<requires>
 			<import addon="xbmc.addon" version="12.0.0"/>
