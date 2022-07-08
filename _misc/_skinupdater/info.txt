@@ -1,0 +1,165 @@
+dl
+	powershell -Command "Invoke-WebRequest http://mirrors.kodi.tv/build-deps/win32/TexturePacker-win32-v141-20200105.7z -OutFile TexturePacker-win32-v141-20200105.7z"
+	powershell -Command "(New-Object Net.WebClient).DownloadFile('http://mirrors.kodi.tv/build-deps/win32/TexturePacker-win32-v141-20200105.7z', 'TexturePacker-win32-v141-20200105.7z')"
+
+
+https://docs.microsoft.com/de-de/dotnet/api/system.windows.forms.openfiledialog?view=windowsdesktop-6.0
+
+zip/compress
+	compress-archive
+	https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.archive/compress-archive?view=powershell-7.2
+	
+	expand-archive
+	https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.archive/expand-archive?view=powershell-7.2
+
+	tar
+	https://www.freebsd.org/cgi/man.cgi?query=bsdtar&sektion=1
+	https://docs.microsoft.com/en-us/virtualization/community/team-blog/2017/20171219-tar-and-curl-come-to-windows
+
+certutil
+	https://docs.microsoft.com/de-de/windows-server/administration/windows-commands/certutil
+
+find
+	https://docs.microsoft.com/de-de/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc725655(v=ws.11)?redirectedfrom=MSDN
+
+	Syntax:
+			
+		FIND [/V or /C][/I][/N] "string" [drive:][path]filename
+		where:
+		/V 	Displays all lines not containing the string specified.
+		/C 	Displays the count of lines containing the string.
+		/I 	Ignores the case of characters when searching for the string.
+		/N 	Displays the line numbers with the displayed lines.
+		/OFF[LINE] 	Do not skip files with offline attribute set (only available in Windows XP and later versions).
+		"string" 	Specifies the text string to find.
+		drive:\path   	Specifies the location of the file or files to search.
+		filename 	Specifies the name of the file to be searched.
+	 
+		If a path is not specified, FIND searches the text typed at the prompt or piped from another command.
+
+		 
+		Note: 	If the "string" contains any "special" characters (i.e. doublequote, ampersand, pipe, greater or less than, caret, percent sign) these characters need to be escaped: a literal percent sign must be replaced by a double percent sign, a literal doublequote by 2 doublequotes, the rest must be preceded by a caret.
+		If the FIND command is placed within a code block (i.e. in parenthesis) it is safest to escape parenthesis inside the text string with carets too.
+
+xcopy
+		https://docs.microsoft.com/de-de/windows-server/administration/windows-commands/xcopy
+		  SYNTAX  Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-DD-YYYY]] [/u] [/i] [/s [/e]] [/t] [/k] [/r] [/h] [{/a | /m}] [/n] [/o] [/x] [/exclude:FileName1[+[FileName2]][+[FileName3]]] [{/y | /-y}] [/z] [/b] [/j]
+
+
+			/d [:MM-DD-YYYY] 	Kopiert Quelldateien, die nur am oder nach dem angegebenen Datum geändert wurden. 
+								Wenn Sie keinen MM-DD-YYYY-Wert einschließen, kopiert xcopy alle Quelldateien, die neuer als vorhandene Zieldateien sind. 
+								Mit dieser Befehlszeilenoption können Sie geänderte Dateien aktualisieren.
+								
+			/s 	Kopiert Verzeichnisse und Unterverzeichnisse, es sei denn, sie sind leer. 
+				Wenn Sie /s weglassen, funktioniert xcopy innerhalb eines einzelnen Verzeichnisses.
+				
+			/e 	Kopiert alle Unterverzeichnisse, auch wenn sie leer sind. 
+				Verwenden Sie /e mit den Befehlszeilenoptionen /s und /t.
+			
+			/t 	Kopiert nur die Unterverzeichnisstruktur (d. h. die Struktur), nicht die Dateien.
+				Um leere Verzeichnisse zu kopieren, müssen Sie die Befehlszeilenoption /e einschließen.
+			
+			/k 	Kopiert Dateien und behält das schreibgeschützte Attribut für Zieldateien bei, sofern es in den Quelldateien vorhanden ist.
+				Standardmäßig entfernt xcopy das schreibgeschützte Attribut.
+			
+			##
+			/h 	Kopiert Dateien mit ausgeblendeten und Systemdateiattributen. Standardmäßig kopiert xcopy keine ausgeblendeten oder Systemdateien.
+			
+			/i 	Wenn Source ein Verzeichnis ist oder Platzhalter enthält und Destination nicht vorhanden ist, 
+					geht xcopy davon aus, dass Destination einen Verzeichnisnamen angibt und ein neues Verzeichnis erstellt.
+				Anschließend kopiert xcopy alle angegebenen Dateien in das neue Verzeichnis.
+				Standardmäßig werden Sie von xcopy aufgefordert, anzugeben, ob Destination eine Datei oder ein Verzeichnis ist.
+			
+			/exclude:FileName1[+[FileName2]][+[FileName3]( )] 	
+				Gibt eine Liste von Dateien an. Mindestens eine Datei muss angegeben werden.
+				Each file will contain search strings with each string on a separate line in the file.
+				Wenn eine der Zeichenfolgen mit einem Teil des absoluten Pfads der zu kopierenden Datei übereinstimmt, wird diese Datei vom Kopieren ausgeschlossen.
+				Wenn Sie z.B. die Zeichenfolge obj angeben, werden alle Dateien unterhalb des Verzeichnis-Obj oder alle Dateien mit der Erweiterung .obj ausgeschlossen.
+			
+			/w 	Displays the following message and waits for your response before starting to copy files:
+					
+					Drücken Sie eine beliebige Taste, um mit dem Kopieren von Dateien zu beginnen.
+
+			/v 	Überprüft jede Datei beim Schreiben in die Zieldatei, um sicherzustellen, dass die Zieldateien mit den Quelldateien identisch sind.
+			
+			/y 	Unterdrückt die Aufforderung, zu bestätigen, dass Sie eine vorhandene Zieldatei überschreiben möchten.
+			/-y Fordert sie auf, zu bestätigen, dass Sie eine vorhandene Zieldatei überschreiben möchten.
+
+md		
+		https://docs.microsoft.com/de-de/windows-server/administration/windows-commands/md
+		md [<drive>:]<path>	
+
+del
+		https://docs.microsoft.com/de-de/windows-server/administration/windows-commands/del
+
+rd
+		https://docs.microsoft.com/de-de/windows-server/administration/windows-commands/rd
+		
+		
+Get-Content
+	https://docs.microsoft.com/de-de/powershell/module/microsoft.powershell.management/get-content?view=powershell-7.2
+	-Encoding
+
+	Specifies the type of encoding for the target file. The default value is utf8NoBOM.
+
+		The acceptable values for this parameter are as follows:
+		-  "unknown;string;unicode;bigendianunicode;utf8;utf7;utf32;ascii;default*;oem".
+		  
+			ascii: Uses the encoding for the ASCII (7-bit) character set.
+			bigendianunicode: Encodes in UTF-16 format using the big-endian byte order.
+			bigendianutf32: Encodes in UTF-32 format using the big-endian byte order.
+			oem: Uses the default encoding for MS-DOS and console programs.
+			unicode: Encodes in UTF-16 format using the little-endian byte order.
+			utf7: Encodes in UTF-7 format.
+			utf8: Encodes in UTF-8 format.
+			utf8BOM: Encodes in UTF-8 format with Byte Order Mark (BOM)
+		 *=   utf8NoBOM: Encodes in UTF-8 format without Byte Order Mark (BOM)
+			utf32: Encodes in UTF-32 format.
+			
+			Encoding is a dynamic parameter that the FileSystem provider adds to the Get-Content cmdlet. This parameter is available only in file system drives.
+
+		When reading from and writing to binary files, use the AsByteStream parameter and a value of 0 for the ReadCount parameter. A ReadCount value of 0 reads the entire file in a single read operation. The default ReadCount value, 1, reads one byte in each read operation and converts each byte into a separate object, which causes errors when you use the Set-Content cmdlet to write the bytes to a file unless you use AsByteStream parameter.
+
+		Beginning with PowerShell 6.2, the Encoding parameter also allows numeric IDs of registered code pages (like -Encoding 1251) or string names of registered code pages (like -Encoding "windows-1251"). For more information, see the .NET documentation for Encoding.CodePage.
+			https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding.codepage?view=netcore-2.2
+
+https://docs.microsoft.com/de-de/windows-server/administration/windows-commands/if
+https://ss64.com/nt/if.html
+
+
+7zip 
+	Usage: 7z <command> [<switches>...] <archive_name> [<file_names>...]
+       [<@listfiles...>]
+
+	<Commands>
+	  a: Add files to archive
+	  b: Benchmark
+	  d: Delete files from archive
+	  e: Extract files from archive (without using directory names)
+	  l: List contents of archive
+	  t: Test integrity of archive
+	  u: Update files to archive
+	  x: eXtract files with full paths
+
+	<Switches>
+	  -ai[r[-|0]]{@listfile|!wildcard}: Include archives
+	  -ax[r[-|0]]{@listfile|!wildcard}: eXclude archives
+	  -bd: Disable percentage indicator
+	  -i[r[-|0]]{@listfile|!wildcard}: Include filenames
+	  -m{Parameters}: set compression Method
+	  -o{Directory}: set Output directory
+	  -p{Password}: set Password
+	  -r[-|0]: Recurse subdirectories
+	  -scs{UTF-8 | WIN | DOS}: set charset for list files
+	  -sfx[{name}]: Create SFX archive
+	  -si[{name}]: read data from stdin
+	  -slt: show technical information for l (List) command
+	  -so: write data to stdout
+	  -ssc[-]: set sensitive case mode
+	  -ssw: compress shared files
+	  -t{Type}: Set type of archive
+	  -u[-][p#][q#][r#][x#][y#][z#][!newArchiveName]: Update options
+	  -v{Size}[b|k|m|g]: Create volumes
+	  -w[{path}]: assign Work directory. Empty path means a temporary directory
+	  -x[r[-|0]]]{@listfile|!wildcard}: eXclude filenames
+	  -y: assume Yes on all queries

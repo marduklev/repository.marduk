@@ -1,0 +1,9 @@
+.gitattributes
+_xbt\
+changelog.txt
+swan_info.md
+xml_folderfiles.ods
+media\Textures.xbt
+media\Roundedge.xbt
+LICENSE.txt
+README.md

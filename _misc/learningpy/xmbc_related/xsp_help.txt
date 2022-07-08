@@ -1,0 +1,219 @@
+types
+
+    # songs
+    # albums
+    # artists
+    # movies
+    # tvshows
+    # episodes
+    # musicvideos
+    # mixed	[used to combine music and music videos.]
+
+operator
+        #    contains 	True if the field contains the parameter as a substring
+        #    doesnotcontain 	True if the field does not contain the parameter as a substring
+        #    is 	True if the field matches the parameter exactly
+        #    isnot 	True if the field does not match the parameter exactly
+        #    startswith 	True if the start of the field matches the parameter
+        #    endswith 	True if the end of the field matches the parameter
+        #    lessthan 	True if the content of the field is less than the parameter
+        #    greaterthan 	True if the content of the field is greater than the parameter
+        #    after 	True if the content of the field comes after the parameter
+        #    before 	True if the content of the field comes before the parameter
+        #    inthelast 	True if the field falls in the last range specified by the parameter. Only applicable for a date field.
+        #    notinthelast 	True if the field does not fall in the last range specified by the parameter. Only applicable for a date field.
+
+field
+        # 3.1 Songs
+
+            # Genre
+            # Source
+            # Album
+            # Artist
+            # AlbumArtist
+            # Title
+            # Year
+            # Time
+            # TrackNumber
+            # Filename
+            # Path
+            # Playcount
+            # LastPlayed
+            # Rating
+            # UserRating
+            # Comment
+            # Moods
+
+
+        # 3.2 Albums
+
+            # Genre
+            # Source
+            # Album
+            # Artist
+            # AlbumArtist
+            # Year
+            # Review
+            # Themes
+            # Moods
+            # Styles
+            # Compilation
+            # AlbumType
+            # MusicLabel
+            # Rating
+            # UserRating
+            # Playcount
+            # LastPlayed
+            # Path
+
+
+        # 3.3 Artists
+
+            # Artist
+            # Source
+            # Genre
+            # Moods
+            # Styles
+            # Instruments
+            # Biography
+            # ArtistType
+            # Gender
+            # Disambiguation
+            # Born
+            # BandFormed
+            # Disbanded
+            # Died
+            # Role
+            # Path
+
+
+        # 3.4 TV Shows
+
+            # Title
+            # OriginalTitle
+            # Plot
+            # TvShowStatus
+            # Votes
+            # Rating
+            # UserRating
+            # Year
+            # Genre
+            # Director
+            # Actor
+            # NumberOfEpisodes
+            # NumberOfWatchedEpisodes
+            # Playcount
+            # Path
+            # Studio
+            # MPAA
+            # DateAdded
+            # LastPlayed
+            # InProgress
+            # Tag
+        
+        # 3.5 Episodes
+            # Title
+            # TvShowTitle
+            # OriginalTitle
+            # Plot
+            # Votes
+            # Rating
+            # UserRating
+            # Time
+            # Writer
+            # AirDate
+            # Playcount
+            # LastPlayed
+            # InProgress
+            # Genre
+            # Year // premiered
+            # Director
+            # Actor
+            # EpisodeNumber
+            # Season
+            # Filename
+            # Path
+            # Studio
+            # MPAA
+            # DateAdded
+            # Tag
+            # VideoResolution
+            # AudioChannels
+            # AudioCount
+            # SubtitleCount
+            # VideoCodec
+            # AudioCodec
+            # AudioLanguage
+            # SubtitleLanguage
+            # VideoAspectRatio
+
+        # 3.6 Movies
+            # Title
+            # OriginalTitle
+            # Plot
+            # PlotOutline
+            # Tagline
+            # Votes
+            # Rating
+            # UserRating
+            # Time
+            # Writer
+            # Playcount
+            # LastPlayed
+            # InProgress
+            # Genre
+            # Country
+            # Year // premiered
+            # Director
+            # Actor
+            # MPAA
+            # Top250
+            # Studio
+            # Trailer
+            # Filename
+            # Path
+            # Set
+            # Tag
+            # DateAdded
+            # VideoResolution
+            # AudioChannels
+            # AudioCount
+            # SubtitleCount
+            # VideoCodec
+            # AudioCodec
+            # AudioLanguage
+            # SubtitleLanguage
+            # VideoAspectRatio
+
+        # 3.7 Music Videos
+            # Title
+            # Genre
+            # Album
+            # Year
+            # Artist
+            # Filename
+            # Path
+            # Playcount
+            # LastPlayed
+            # Rating
+            # UserRating
+            # Time
+            # Director
+            # Studio
+            # Plot
+            # Tag
+            # DateAdded
+            # VideoResolution
+            # AudioChannels
+            # AudioCount
+            # SubtitleCount
+            # VideoCodec
+            # AudioCodec
+            # AudioLanguage
+            # SubtitleLanguage
+            # VideoAspectRatio
+
+
+        # 3.8 Other
+            # Playlist
+            # VirtualFolder

@@ -1,0 +1,8 @@
+\*.
+\*\*.
+.mp3
+.flac
+.mp4
+.pdf
+.txt
+.irc
