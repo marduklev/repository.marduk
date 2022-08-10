@@ -4,7 +4,7 @@ color b
 echo -------------------------------------------------------------------------
 echo  create nfo for musicvideos if missing
 echo  DO A SCRAPE AND EXPORT NFOs BEFORE RUN THIS SCRIPT
-echo  be sure you dont use any special characters like ^& in filename and foldername
+echo  containing characters like ^"^&^<^>^]^| may resullt in errors
 echo  push key to start
 echo -------------------------------------------------------------------------
 echo.
